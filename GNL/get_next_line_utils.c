@@ -6,7 +6,7 @@
 /*   By: danramos <danramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 12:41:20 by danramos          #+#    #+#             */
-/*   Updated: 2025/01/15 15:27:08 by danramos         ###   ########.fr       */
+/*   Updated: 2025/01/15 17:49:50 by danramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strchr(char *s, int c)
 		return ((char *)&s[ft_strlen(s)]);
 	while (s[i] != '\0')
 	{
-		if (s[i] == (char)c)
+		if (s[i] == (char) c)
 			return ((char *)&s[i]);
 		i++;
 	}
@@ -62,13 +62,14 @@ char	*ft_strjoin(char *str, char *buffer)
 		return (NULL);
 	if (str)
 	{
-		while (str[i++] != '\0')
+		while (str[++i] != '\0')
 			str2[i] = str[i];
 	}
 	while (buffer[j] != '\0')
 		str2[i++] = buffer[j++];
 	str2[ft_strlen(str) + ft_strlen(buffer)] = '\0';
-	return (free(str), str2);
+	free(str);
+	return (str2);
 }
 
 char	*ft_get_line(char *str)
@@ -120,7 +121,7 @@ char	*ft_new_str(char *str)
 	i++;
 	while (str[i])
 		str2[j++] = str[i++];
-	str[j] = '\0';
+	str2[j] = '\0';
 	free(str);
 	return (str2);
 }

@@ -6,7 +6,7 @@
 /*   By: danramos <danramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 13:00:13 by danramos          #+#    #+#             */
-/*   Updated: 2025/01/15 16:17:53 by danramos         ###   ########.fr       */
+/*   Updated: 2025/01/15 18:04:12 by danramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 3
+#  define BUFFER_SIZE 2
 # endif
 
 char	*get_next_line(int fd);
