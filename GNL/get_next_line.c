@@ -6,7 +6,7 @@
 /*   By: danramos <danramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 12:24:08 by danramos          #+#    #+#             */
-/*   Updated: 2025/01/15 18:34:03 by danramos         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:03:17 by danramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ char	*ft_read_str(int fd, char *str)
 
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
-	{
-		free(str);
 		return (NULL);
-	}
 	read_bytes = 1;
 	while (!ft_strchr(str, '\n') && read_bytes != 0)
 	{
